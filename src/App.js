@@ -241,7 +241,7 @@ class App extends React.Component {
             <div className="row">
               <div className="col-md-20">
                 <hr />
-                <h4>Tabela com os Filmes</h4>
+                <h3>Tabela com os Filmes</h3>
                 {/* Tabela5 tem um 'parâmetro de entrada', chamado 'inDadosFotos'.
                 Neste caso, está a receber o array JSON com os dados das fotos dos Cães,
                 lidos da API */}

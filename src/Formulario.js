@@ -49,7 +49,7 @@ import React from 'react'
             realizador:"",
             elenco:"",
             descricao:"",
-            //link:"",
+            link:"",
             duracao:"",
             pontuacao:""
         } 
@@ -134,6 +134,13 @@ import React from 'react'
         //guardar os dados recolhidos
         this.setState({
             elenco: evento.target.value
+        });
+    }
+
+    handlerLinkChange = (evento) =>{
+        //guardar os dados recolhidos
+        this.setState({
+            link: evento.target.value
         });
     }
 
@@ -239,13 +246,13 @@ import React from 'react'
                                         required
                                         accept=".jpg,.png,.JPG,.PNG"
                                         onChange={this.handlerFotoChange}
-                                        className="form-control" /><br />  
+                                        className="form-control btn btn-outline-secondary" /><br />  
                 </div>
                 <div className="col-md-4">  
                         Descrição: <input type="text"
                                 value={this.state.descricao}
                                 onChange={this.handlerDescricaoChange}
-                                className="form-control btn btn-outline-secondary" /><br />  
+                                className="form-control btn btn-outline-secondary" /><br /><br />  
                 </div>
                 <div className="col-md-4">  
                         Realizador do Filme: <input type="text"
@@ -259,12 +266,6 @@ import React from 'react'
                                 onChange={this.handlerElencoChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
                 </div>
-                {/* <div className="col-md-4">  
-                        Descrição: <input type="text"
-                                value={this.state.descricao}
-                                onChange={this.handlerDescricaoChange}
-                                className="form-control btn btn-outline-secondary" /><br />  
-                </div> */}
                 <div className="col-md-4">  
                         Duração: <input type="text"
                                 value={this.state.duracao}
@@ -272,10 +273,20 @@ import React from 'react'
                                 className="form-control btn btn-outline-secondary" /><br /><br />   
                 </div>
                 <div className="col-md-4">  
-                        Pontuação: <input type="text"
+                        Pontuação: <input type="number"
+                                min="1"
+                                max="10"
+                                placeholder="1 a 10"
                                 value={this.state.pontuacao}
                                 onChange={this.handlerPontuacaoChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
+                </div>
+                <div className="col-md-4">
+                        Link: <input type="link"
+                            required
+                            value={this.state.link}
+                            onChange={this.handlerLinkChange}
+                            className="form-control btn btn-outline-secondary" /><br/>
                 </div>
                 </div>
                 <br></br>

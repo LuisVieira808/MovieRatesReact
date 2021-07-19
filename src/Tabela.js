@@ -9,15 +9,15 @@ function CabecalhoTabela() {
         <thead>
             <tr>
                 {/* <th>Id do Filme</th> */}
-                <th>Nome do Filme</th>
-                <th>Capa do Filme</th>
-                <th>Descrição</th>
-                <th>Realizador do Filme</th>
-                <th>Elenco</th>
-                <th>Duração</th>
-                <th>Pontuação 0/10</th>
-                <th>Link</th>
-                <th></th>
+                <th style={{textAlign:'center'}}>Nome do Filme</th>
+                <th style={{textAlign:'center'}}>Capa do Filme</th>
+                <th style={{textAlign:'center'}}>Descrição</th>
+                <th style={{textAlign:'center'}}>Realizador do Filme</th>
+                <th style={{textAlign:'center'}}>Elenco</th>
+                <th style={{textAlign:'center'}}>Duração</th>
+                <th style={{textAlign:'center'}}>Pontuação 0/10</th>
+                <th style={{textAlign:'center'}}>Link</th>
+                <th style={{textAlign:'center'}}></th>
             </tr>
         </thead>
     )
@@ -32,17 +32,17 @@ const CorpoTabela = (props) => {
         return (
             <tr key={row.idFilmes}>
                 {/* <td>{row.idFilmes}</td> */}
-                <td><br></br><br></br>{row.titulo}</td>
-                <td><img src={'fotos/' + row.capa}
+                <td style={{textAlign:'center'}}><br></br><br></br>{row.titulo}</td>
+                <td style={{textAlign:'center'}}><img src={'fotos/' + row.capa}
                     alt={'foto do ' + row.titulo}
                     height="150" width="120"/>
                 </td>
-                <td><br></br><br></br>{row.descricao}</td>
-                <td><br></br><br></br>{row.realizador}</td>
-                <td><br></br><br></br>{row.elenco}</td>
-                <td><br></br><br></br>{row.duracao}</td>
-                <td><br></br><br></br>{row.pontuacao}</td>
-                <td>
+                <td style={{textAlign: 'justify'}}><br></br><br></br>{row.descricao}</td>
+                <td style={{textAlign:'center'}}><br></br><br></br>{row.realizador}</td>
+                <td style={{textAlign:'center'}}><br></br><br></br>{row.elenco}</td>
+                <td style={{textAlign:'center'}}><br></br><br></br>{row.duracao}</td>
+                <td style={{textAlign:'center'}}><br></br><br></br>{row.pontuacao}</td>
+                <td style={{textAlign:'center'}}>
                 <br></br><br></br>
                 <a href={row.link}>
                     <img src="fotos/linke.png"
@@ -50,9 +50,9 @@ const CorpoTabela = (props) => {
                     height="40" width="40"/>
                 </a>
                 </td>
-                <td>
+                <td style={{textAlign:'center'}}>
                 <br></br><br></br>
-                <button className="btn btn-secondary" onClick={()=>props.filmeAremover(row)}>Delete</button>
+                <button className="btn btn-secondary" onClick={()=>props.filmeAremover(row)}>Eliminar</button>
                 </td>
             </tr>
 
