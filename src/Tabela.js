@@ -52,7 +52,7 @@ const CorpoTabela = (props) => {
                 </td>
                 <td style={{textAlign:'center'}}>
                 <br></br><br></br>
-                <button className="btn btn-secondary" onClick={()=>props.filmeAremover(row)}>Eliminar</button>
+                <button className="btn btn-danger" onClick={()=>props.filmeAremover(row)}>Eliminar</button>
                 </td>
             </tr>
 

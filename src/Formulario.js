@@ -276,7 +276,7 @@ import React from 'react'
                         Pontuação: <input type="number"
                                 min="1"
                                 max="10"
-                                placeholder="1 a 10"
+                                placeholder="1 - 10"
                                 value={this.state.pontuacao}
                                 onChange={this.handlerPontuacaoChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
@@ -290,7 +290,7 @@ import React from 'react'
                 </div>
                 </div>
                 <br></br>
-                    <input type="submit" value="Adicionar Filme" className="btn btn-secondary" /><br /><br /> 
+                    <input type="submit" value="Adicionar Filme" className="btn btn-primary" size="lg"/><br /><br /> 
             </form>
             
         )
