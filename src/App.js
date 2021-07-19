@@ -11,7 +11,7 @@ import Tabela from './Tabela';
 import Formulario from './Formulario';
 
 /**
- * Função que irá ler os dados (filmes) da API
+ * Função   que irá ler os dados (filmes) da API
  */
 async function getFilmes() {
 
