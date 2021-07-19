@@ -229,20 +229,26 @@ import React from 'react'
                 <div className="col-md-4">
                         {/* Filme: <EscolheFilme inListaFilmes={inDadosFilmes}
                         outIdFilmeEscolhido={this.handlerFilmeChange}/><br /> */}
-                        Filme: <input type="text"
+                        Nome do Filme: <input type="text"
                                 value={this.state.titulo}
                                 onChange={this.handlerFilmeChange}
                                 className="form-control btn btn-outline-secondary" /><br />
                 </div>
                 <div className="col-md-4">  
-                        Foto do Filme: <input type="file" 
+                        Capa do Filme: <input type="file" 
                                         required
                                         accept=".jpg,.png,.JPG,.PNG"
                                         onChange={this.handlerFotoChange}
                                         className="form-control" /><br />  
                 </div>
                 <div className="col-md-4">  
-                        Realizador: <input type="text"
+                        Descrição: <input type="text"
+                                value={this.state.descricao}
+                                onChange={this.handlerDescricaoChange}
+                                className="form-control btn btn-outline-secondary" /><br />  
+                </div>
+                <div className="col-md-4">  
+                        Realizador do Filme: <input type="text"
                                 value={this.state.realizador}
                                 onChange={this.handlerRealizadorChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
@@ -253,17 +259,17 @@ import React from 'react'
                                 onChange={this.handlerElencoChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
                 </div>
-                <div className="col-md-4">  
+                {/* <div className="col-md-4">  
                         Descrição: <input type="text"
                                 value={this.state.descricao}
                                 onChange={this.handlerDescricaoChange}
                                 className="form-control btn btn-outline-secondary" /><br />  
-                </div>
+                </div> */}
                 <div className="col-md-4">  
-                        Duracao: <input type="text"
+                        Duração: <input type="text"
                                 value={this.state.duracao}
                                 onChange={this.handlerDuracaoChange}
-                                className="form-control btn btn-outline-secondary" /><br />  
+                                className="form-control btn btn-outline-secondary" /><br /><br />   
                 </div>
                 <div className="col-md-4">  
                         Pontuação: <input type="text"
@@ -272,6 +278,7 @@ import React from 'react'
                                 className="form-control btn btn-outline-secondary" /><br />  
                 </div>
                 </div>
+                <br></br>
                     <input type="submit" value="Adicionar Filme" className="btn btn-secondary" /><br /><br /> 
             </form>
             
